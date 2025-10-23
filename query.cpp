@@ -29,7 +29,7 @@ struct Posting {
 
 using Index = unordered_map<string, vector<Posting>>;
 
-void loadIndex(Index& index, const string& indexFile = "/Users/mac2/University/Information Retrieval/Implementation/Positional Inverted Index/pos_inverted_index.json") {
+void loadIndex(Index& index, const string& indexFile = "/Users/mac2/University/Information Retrieval/Implementation/PII/Search-Engine-IR/pos_inverted_index.json") {
     ifstream in(indexFile);
     if (!in) {
         cerr << "Error: File " << indexFile << " not found" << endl;
@@ -129,7 +129,7 @@ void loadIndex(Index& index, const string& indexFile = "/Users/mac2/University/I
     }
 }
 
-void loadMapping(unordered_map<int, string>& docMapping, const string& mappingFile = "/Users/mac2/University/Information Retrieval/Implementation/Positional Inverted Index/docId_filePath_mapping.csv") {
+void loadMapping(unordered_map<int, string>& docMapping, const string& mappingFile = "/Users/mac2/University/Information Retrieval/Implementation/PII/Search-Engine-IR/docId_filePath_mapping.csv") {
     ifstream in(mappingFile);
     if (!in) {
         cerr << "Error: File " << mappingFile << " not found" << endl;
